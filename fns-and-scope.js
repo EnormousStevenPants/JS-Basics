@@ -6,8 +6,10 @@ var name = 'Tyler';
 
   //Code Here
   function isTyler(name) {
-    if (name == "Tyler") {
+    if (name === "Tyler") {
       return true;
+    } else {
+      return false;
     }
   }
 
@@ -38,7 +40,7 @@ var name = 'Tyler';
   function welcome() {
     var person = getName();
 
-    alert("Welcome" + person);
+    alert("Welcome, " + person);
   }
 
 //////////////////PROBLEM 4////////////////////
@@ -79,7 +81,7 @@ var name = 'Tyler';
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
-  var newMyName = myName();
+  var newMyName = myName;
 
 //Now alert the result of invoking newMyName
   alert(newMyName);
@@ -93,7 +95,9 @@ var name = 'Tyler';
 
   //Code Here
   function outerFn() {
-    return myName();
+    return function(){
+      return "Steven The Great";
+    };
   }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
@@ -102,4 +106,4 @@ var name = 'Tyler';
   var innerFn = outerFn();
 
 //Now invoke innerFn.
-  alert(innerFn);
+  innerFn();
